@@ -1,7 +1,7 @@
 // src/context/LanguageContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface Translations {
+  interface Translations {
   en: {
     whatsapp_message: string;
     contact_form_title: string;
