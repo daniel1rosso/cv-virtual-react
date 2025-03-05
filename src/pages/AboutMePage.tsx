@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from '../context/LanguageContext';
 
 const AboutMePage = () => {
+  const { t } = useTranslation();
 
   return (
     <section id="about" className="py-16 px-8 md:px-24">
@@ -22,7 +24,7 @@ const AboutMePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeInOut' }}
           >
-            About Me
+            {t("about_title")}
           </motion.h2>
           <motion.p
             className="text-gray-600 leading-relaxed"
@@ -30,9 +32,7 @@ const AboutMePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeInOut' }}
           >
-            I am a Systems Engineer passionate about the DevSecOps approach in the cloud and an enthusiast of technological revolution. I love leading projects, automating processes, and providing backend solutions for innovative applications.
-            With work experience on various projects, I take pride in demonstrating exceptional skills and approaching challenges with dedication, responsibility, and enthusiasm to achieve the most satisfactory resolutions.
-            I am excited to continue growing professionally and take on new challenges in the world of technology. I look forward to contributing my passion and expertise to exciting and transformative projects!
+            {t("about_description")}
           </motion.p>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from '../context/LanguageContext';
 
 const ContactPage = () => {
+  const { t } = useTranslation();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -35,12 +37,12 @@ const ContactPage = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
-          Contact Me
+          {t("contact_form_title")}
         </h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
             <label htmlFor="first_name" className="block text-gray-700 text-sm font-bold mb-2">
-              First Name
+              {t("contact_form_name")}
             </label>
             <input
               type="text"
@@ -52,7 +54,7 @@ const ContactPage = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="last_name" className="block text-gray-700 text-sm font-bold mb-2">
-              Last Name
+              {t("contact_form_lastname")}
             </label>
             <input
               type="text"
@@ -64,7 +66,7 @@ const ContactPage = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-              Email
+              {t("contact_form_email")}
             </label>
             <input
               type="email"
@@ -76,7 +78,7 @@ const ContactPage = () => {
           </div>
           <div className="mb-6">
             <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
-              Message
+              {t("contact_form_description")}
             </label>
             <textarea
               id="message"
@@ -91,7 +93,7 @@ const ContactPage = () => {
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
-              Send Message
+              {t("contact_form_send")}
             </button>
           </div>
           {responseMessage && (

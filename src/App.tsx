@@ -5,8 +5,8 @@ import { LanguageProvider } from './context/LanguageContext';
 import HeroPage from "./pages/HeroPage";
 import AboutMePage from "./pages/AboutMePage";
 import ExperienceSkillPage from "./pages/ExperienceSkillPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import BlogPage from "./pages/BlogPage";
+import InterestsAndSkillsPage from "./pages/InterestsAndSkillsPage";
+import GitHubProjectsPage from "./pages/GitHubProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import CertificationsPage from "./pages/CertificationsPage";
 
@@ -19,8 +19,8 @@ const App = () => {
                 <AboutMePage />
                 <CertificationsPage />
                 <ExperienceSkillPage />
-                <ProjectsPage />
-                <BlogPage />
+                <InterestsAndSkillsPage />
+                <GitHubProjectsPage />
                 <ContactPage />
                 
                 <Footer />

@@ -1,9 +1,68 @@
+// src/pages/HeroPage.tsx
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import {Linkedin, Github, Send, MessageCircle, Instagram, Facebook } from 'lucide-react';
+import { Linkedin, Github, Send, MessageCircle, Instagram, Facebook } from 'lucide-react';
+import ReactCountryFlag from 'react-country-flag';
+import { useTranslation } from '../context/LanguageContext';
 
 const HeroPage = () => {
+  const { t } = useTranslation();
+  const { lang, setLang } = useTranslation();
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+
+  const handleLanguageChange = (newLang: "en" | "es") => {
+    setLang(newLang);
+    setLangDropdownOpen(false);
+  };
+
+  // Opciones de idiomas disponibles
+  const languageItems = [
+    { code: "en", label: "English", countryCode: "US" },
+    { code: "es", label: "Español", countryCode: "AR" },
+  ];
+
   return (
-    <section id="start" className="bg-gradient-to-r from-blue-100 to-blue-300 py-20 px-8 md:px-24">
+    <section
+      id="start"
+      className="relative bg-gradient-to-r from-blue-100 to-blue-300 py-20 px-8 md:px-24"
+    >
+      {/* Botón de idioma posicionado en la esquina superior derecha */}
+      <div className="absolute top-4 right-4">
+        <div className="relative">
+          <button
+            onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+            className="flex items-center space-x-2 hover:text-gray-700 focus:outline-none"
+          >
+            <ReactCountryFlag
+              countryCode={lang === "en" ? "US" : "AR"}
+              svg
+              style={{ width: "1.5em", height: "1.5em" }}
+              title={lang === "en" ? "English" : "Español"}
+            />
+          </button>
+          {langDropdownOpen && (
+            <ul className="absolute right-0 mt-2 w-36 bg-white text-black rounded shadow-lg z-10">
+              {languageItems.map((item) => (
+                <li key={item.code} className="text-center">
+                  <button
+                    onClick={() => handleLanguageChange(item.code as "en" | "es")}
+                    className="w-full flex items-center justify-center space-x-2 px-4 py-2 hover:bg-gray-100"
+                  >
+                    <ReactCountryFlag
+                      countryCode={item.countryCode}
+                      svg
+                      style={{ width: "1.5em", height: "1.5em" }}
+                      title={item.label}
+                    />
+                    <span>{item.label}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+
       <div className="container mx-auto text-center">
         <motion.h1
           className="text-4xl md:text-6xl font-bold text-gray-800 mb-4"
@@ -19,7 +78,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeInOut' }}
         >
-          System Engineer, Automator, Entrepreneurship, and Cloud Computing
+          {t("title_description")}
         </motion.p>
         <motion.a
           href="./cv-danielalbertorosso.pdf"
@@ -30,7 +89,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4, ease: 'easeInOut' }}
         >
-          Download CV
+          {t("title_download_cv")}
         </motion.a>
 
         <motion.div

@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from '../context/LanguageContext';
 
 const CertificationsPage = () => {
+  const { t } = useTranslation();
 
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
-          Certifications
+          {t("certifications_title")}
         </h2>
         <div className="grid grid-cols-3 gap-4 md:grid-cols-3 place-items-center">
           {[

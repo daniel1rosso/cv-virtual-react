@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from '../context/LanguageContext';
 
 interface Project {
   id: number;
@@ -9,6 +10,7 @@ interface Project {
 }
 
 const GitHubProjects = () => {
+  const { t } = useTranslation();
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const GitHubProjects = () => {
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
-          Featured GitHub Projects
+          {t("github_projects_title")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (

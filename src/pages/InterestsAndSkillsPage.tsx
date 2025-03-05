@@ -1,66 +1,71 @@
 import { motion } from 'framer-motion';
 import { CheckCheck } from 'lucide-react';
+import { useTranslation } from '../context/LanguageContext';
 
 const InterestsAndSkills = () => {
+    const { t } = useTranslation();
+
     const interests = [
         {
-            title: 'Outdoor Exploration',
-            description: 'I enjoy spending time outdoors and exploring new places through travel.',
+            title: t("outdoor_title"),
+            description: t("outdoor_description"),
         },
         {
-            title: 'Sports Activities',
-            description: 'I am passionate about cycling, playing paddle, and staying physically active.',
+            title: t("sport_title"),
+            description: t("sport_description"),
         },
         {
-            title: 'Entertainment and Relaxation',
-            description: 'I like to relax by watching series in my leisure time, finding a balance between work and rest.',
+            title: t("entertainment_title"),
+            description: t("entertainment_description"),
         },
         {
-            title: 'Emerging Technology',
-            description: 'Keeping up-to-date with the latest emerging technologies and their application in various fields is one of my priorities. I am always eager to learn and apply new tools and solutions to enhance my skills and knowledge.',
+            title: t("emerging_title"),
+            description: t("emerging_description"),
         },
         {
-            title: 'Entrepreneurial Spirit',
-            description: 'I am motivated by the entrepreneurial spirit. I love exploring opportunities to develop innovative projects and contribute to the growth and success of business initiatives.',
+            title: t("entrepreneurial_spirit_title"),
+            description: t("entrepreneurial_spirit_description"),
         },
     ];
 
     const skills = [
         {
-            title: 'Commitment',
-            description: 'I dedicate my energy and time to achieve established goals, showing perseverance and dedication in my work.',
+            title: t("commitment_title"),
+            description: t("commitment_description"),
         },
         {
-            title: 'Responsibility',
-            description: 'I commit to fulfilling my responsibilities and assigned tasks, taking ownership of my actions and decisions.',
+            title: t("responsibility_title"),
+            description: t("responsibility_description"),
         },
         {
-            title: 'Entrepreneurial',
-            description: 'I constantly seek new opportunities and creative solutions to challenges, demonstrating initiative and business vision.',
+            title: t("entrepreneurial_title"),
+            description: t("entrepreneurial_description"),
         },
         {
-            title: 'Involvement',
-            description: 'I actively engage in projects and activities, showing genuine interest and contributing to team success.',
+            title: t("implication_title"),
+            description: t("implication_description"),
         },
         {
-            title: 'Positive Attitude',
-            description: 'I maintain an optimistic and constructive attitude, inspiring others and overcoming obstacles with a progressive mindset.',
+
+            title: t("positive_title"),
+            description: t("positive_description"),
         },
         {
-            title: 'Proactivity',
-            description: 'I anticipate needs and potential problems, taking preventive measures and actively seeking ways to improve efficiency and quality.',
+
+            title: t("positive_title"),
+            description: t("positive_description"),
         },
         {
-            title: 'Adaptability',
-            description: 'I easily adjust to new situations and challenges, being flexible and open to change to achieve established goals.',
+            title: t("adaptability_title"),
+            description: t("adaptability_description"),
         },
         {
-            title: 'Dedication',
-            description: 'I commit to achieving excellence in all my activities, demonstrating perseverance and constant effort to attain the best results.',
+            title: t("dedication_title"),
+            description: t("dedication_description"),
         },
         {
-            title: 'Sincerity',
-            description: 'I act with honesty and transparency in all my interactions, maintaining integrity and trust in all professional relationships.',
+            title: t("sincerity_title"),
+            description: t("sincerity_description"),
         },
     ];
 

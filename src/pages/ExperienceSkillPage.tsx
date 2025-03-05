@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from '../context/LanguageContext';
 
 const ExperienceSkillPage = () => {
+    const { t } = useTranslation();
+    
     const experiences = [
         { year: "January 2025 - Current", title: 'Caxus', description: 'Chief Technology Officer', skills: ['Amazon Web Services (AWS)', 'Linux', 'DevOps', 'Mejora de procesos', 'Automatización', 'Liderazgo', 'Migración a la nube', 'Costes', 'Terraform', 'AWS Lambda', 'AWS CLI', 'AWS Identity and Access Management (IAM)', 'GitLab', 'Bitbucket', 'Bash', 'Amazon DynamoDB', 'Amazon Route 53', 'Amazon Connect', 'AWS Glue', 'AWS Route 53', 'AWS Bucket S3', 'AWS Cost Explorer', 'AWS CloudWatch', 'AWS CloudFront', 'AWS RDS', 'AWS VPN', 'AWS WAF', 'AWS Backup', 'AWS DMS', 'Athena', 'Certificate Manager', 'AWS Kinessis', 'AWS Data Firehose', 'AWS Support', 'AWS Service Quotas', 'Microsoft SQL Server', 'Networking and Security', 'Diagramas esquemáticos', 'Diagramas esquemáticos', 'MongoDB', ] },
         { year: "November 2023 - March 2025", title: 'Start University', description: 'SSR DevOps Engineer', skills: ['Amazon Web Services (AWS)', 'Linux', 'DevOps', 'Mejora de procesos', 'Automatización', 'Liderazgo', 'Migración a la nube', 'Costes', 'Terraform', 'AWS Lambda', 'AWS CLI', 'AWS Identity and Access Management (IAM)', 'GitLab', 'Bash', 'Amazon DynamoDB', 'Amazon Route 53', 'Amazon Connect', 'AWS Glue', 'AWS Route 53', 'AWS Bucket S3', 'AWS Cost Explorer', 'AWS CloudWatch', 'AWS CloudFront', 'AWS RDS', 'AWS VPN', 'AWS WAF', 'AWS Backup', 'AWS DMS', 'Athena', 'Certificate Manager', 'AWS Kinessis', 'AWS Data Firehose', 'AWS Support', 'AWS Service Quotas', 'Microsoft SQL Server', 'Networking and Security'] },
@@ -15,7 +18,7 @@ const ExperienceSkillPage = () => {
         <section id="experience" className="py-16 px-8 md:px-24 bg-gray-100">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
-                    Experience & Skills
+                    {t("experience_title")}
                 </h2>
                 <div className="relative">
                     <div className="absolute left-1/2 h-full border border-gray-300 transform -translate-x-1/2"></div>
