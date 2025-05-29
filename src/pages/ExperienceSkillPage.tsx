@@ -15,11 +15,16 @@ const ExperienceSkillPage = () => {
     ];
 
     return (
-        <section id="experience" className="py-16 px-8 md:px-24 bg-gray-100">
+        <section id="experience" className="py-16 px-8 md:px-24 bg-blue-50">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
+                <motion.h2
+                    className="text-4xl font-semibold mb-10 text-center text-blue-800"
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    >
                     {t("experience_title")}
-                </h2>
+                </motion.h2>
                 <div className="relative">
                     <div className="absolute left-1/2 h-full border border-gray-300 transform -translate-x-1/2"></div>
                     {experiences.map((exp, index) => (

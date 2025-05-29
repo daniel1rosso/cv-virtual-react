@@ -21,11 +21,16 @@ const GitHubProjects = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-blue-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
-          {t("github_projects_title")}
-        </h2>
+        <motion.h2
+            className="text-4xl font-semibold mb-10 text-center text-blue-800"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            >
+            {t("github_projects_title")}
+        </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <motion.a

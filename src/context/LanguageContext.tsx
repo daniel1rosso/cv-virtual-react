@@ -47,6 +47,8 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
     contact_form_email: string;
     contact_form_description: string;
     contact_form_send: string;
+    products_title: string;
+    visit_site: string;
   };
   es: {
     whatsapp_message: string;
@@ -93,6 +95,8 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
     contact_form_email: string;
     contact_form_description: string;
     contact_form_send: string;
+    products_title: string;
+    visit_site: string;
   };
 }
 
@@ -141,7 +145,9 @@ const translations: Translations = {
     contact_form_lastname: "Last name",
     contact_form_email: "Email",
     contact_form_description: "Description",
-    contact_form_send: "Send"
+    contact_form_send: "Send",
+    products_title: "Products",
+    visit_site: "Visit site"
   },
   es: {
     whatsapp_message: "Hola, ¿Cómo puedo ayudarte?",
@@ -187,7 +193,9 @@ const translations: Translations = {
     contact_form_lastname: "Apellido",
     contact_form_email: "Email",
     contact_form_description: "Descripción",
-    contact_form_send: "Enviar"
+    contact_form_send: "Enviar",
+    products_title: "Productos",
+    visit_site: "Visitar sitio"
   }
 };
 

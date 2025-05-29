@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useTranslation } from '../context/LanguageContext';
 
 const ContactPage = () => {
@@ -36,9 +37,14 @@ const ContactPage = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
-          {t("contact_form_title")}
-        </h2>
+        <motion.h2
+            className="text-4xl font-semibold text-gray-800 mb-8 text-center"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            >
+            {t("contact_form_title")}
+        </motion.h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
           <div className="mb-4">
             <label htmlFor="first_name" className="block text-gray-700 text-sm font-bold mb-2">

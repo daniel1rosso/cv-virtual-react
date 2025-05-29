@@ -9,6 +9,9 @@ import InterestsAndSkillsPage from "./pages/InterestsAndSkillsPage";
 import GitHubProjectsPage from "./pages/GitHubProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import CertificationsPage from "./pages/CertificationsPage";
+import ServicesPage from "./pages/ServicesPage";
+import ProductsPage from "./pages/ProductsPage";
+import ProfileHighlights from "./pages/ProfileHighlightsPage";
 
 const App = () => {
     return (
@@ -17,10 +20,13 @@ const App = () => {
                 
                 <HeroPage />
                 <AboutMePage />
+                <ProfileHighlights />
+                <ServicesPage />
                 <CertificationsPage />
-                <ExperienceSkillPage />
-                <InterestsAndSkillsPage />
+                <ProductsPage />
                 <GitHubProjectsPage />
+                <InterestsAndSkillsPage />
+                <ExperienceSkillPage />
                 <ContactPage />
                 
                 <Footer />

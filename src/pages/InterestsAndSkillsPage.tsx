@@ -74,12 +74,12 @@ const InterestsAndSkills = () => {
         <section className="py-16 bg-white">
             <div className="container mx-auto px-4">
                 <motion.h2
-                    className="text-3xl font-semibold text-gray-800 mb-8 text-center"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    Interests
+                    className="text-4xl font-semibold text-gray-800 mb-8 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    >
+                    {t("interests_title")}
                 </motion.h2>
                 <ul className="space-y-4">
                     {interests.map((interest, index) => (
@@ -98,13 +98,14 @@ const InterestsAndSkills = () => {
                         </motion.li>
                     ))}
                 </ul>
+                <br />
                 <motion.h2
-                    className="text-3xl font-semibold text-gray-800 mt-16 mb-8 text-center"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    Skills and Qualities
+                    className="text-4xl font-semibold text-gray-800 mb-8 text-center"
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    >
+                    {t("skills_title")}
                 </motion.h2>
                 <ul className="space-y-4">
                     {skills.map((skill, index) => (

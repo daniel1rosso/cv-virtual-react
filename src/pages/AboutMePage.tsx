@@ -20,11 +20,18 @@ const AboutMePage = () => {
         <div className="md:order-1">
           <motion.h2
             className="text-3xl font-semibold text-gray-800 mb-4"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {t("about_title")}
+          </motion.h2>
+          <motion.h2
+            className="text-3xl font-semibold text-gray-800 mb-4"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeInOut' }}
           >
-            {t("about_title")}
           </motion.h2>
           <motion.p
             className="text-gray-600 leading-relaxed"
