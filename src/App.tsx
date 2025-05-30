@@ -10,7 +10,7 @@ import GitHubProjectsPage from "./pages/GitHubProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import CertificationsPage from "./pages/CertificationsPage";
 import ServicesPage from "./pages/ServicesPage";
-import ProductsPage from "./pages/ProductsPage";
+// import ProductsPage from "./pages/ProductsPage";
 import ProfileHighlights from "./pages/ProfileHighlightsPage";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
                 <ProfileHighlights />
                 <ServicesPage />
                 <CertificationsPage />
-                <ProductsPage />
+                {/* <ProductsPage /> */}
                 <GitHubProjectsPage />
                 <InterestsAndSkillsPage />
                 <ExperienceSkillPage />

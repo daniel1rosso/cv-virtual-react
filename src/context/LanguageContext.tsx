@@ -103,7 +103,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 const translations: Translations = {
   en: {
     whatsapp_message: "Hello, how can I help you?",
-    title_description: "System Engineer, Automator, Entrepreneurship, and Cloud Computing",
+    title_description: "Systems engineer specialized in automation, cloud computing, and scalable solutions. Passionate about technological innovation and digital entrepreneurship",
     title_download_cv: "Download CV",
     about_title: "About Me",
     about_description: "I am a Systems Engineer passionate about the DevSecOps approach in the cloud and an enthusiast of technological revolution. I love leading projects, automating processes, and providing backend solutions for innovative applications. With work experience on various projects, I take pride in demonstrating exceptional skills and approaching challenges with dedication, responsibility, and enthusiasm to achieve the most satisfactory resolutions. I am excited to continue growing professionally and take on new challenges in the world of technology. I look forward to contributing my passion and expertise to exciting and transformative projects!",
@@ -151,7 +151,7 @@ const translations: Translations = {
   },
   es: {
     whatsapp_message: "Hola, ¿Cómo puedo ayudarte?",
-    title_description: "Ingeniero de sistemas, automatizador, emprendedor y computación en la nube",
+    title_description: "Ingeniero de sistemas especializado en automatización, computación en la nube y soluciones escalables. Apasionado por la innovación tecnológica y el emprendimiento digital",
     title_download_cv: "Descargar CV",
     about_title: "Sobre Mí",
     about_description: "Soy un Ingeniero de Sistemas apasionado por el enfoque DevSecOps en la nube y entusiasta de la revolución tecnológica. Me encanta liderar proyectos, automatizar procesos y brindar soluciones backend para aplicaciones innovadoras. Con experiencia laboral en diversos proyectos, me enorgullece demostrar habilidades excepcionales y abordar los desafíos con dedicación, responsabilidad y entusiasmo para lograr las resoluciones más satisfactorias. Estoy entusiasmado por seguir creciendo profesionalmente y asumir nuevos desafíos en el mundo de la tecnología. ¡Espero aportar mi pasión y experiencia a proyectos emocionantes y transformadores!",

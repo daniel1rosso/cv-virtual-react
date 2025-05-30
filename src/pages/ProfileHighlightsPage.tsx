@@ -7,7 +7,7 @@ const ProfileHighlights = () => {
 
   const content = {
     es: {
-      valueTitle: "Propuesta de Valor Comercial",
+      valueTitle: "Propuesta de Valor",
       values: [
         {
           subtitle: "Transformación Digital Integral",
@@ -53,7 +53,7 @@ const ProfileHighlights = () => {
   const langContent = content[lang || "es"];
 
   return (
-    <section className="py-20 px-6 max-w-6xl mx-auto" id="profile">
+    <section className="py-20 px-6 mx-auto" id="profile">
       <motion.h2
         className="text-3xl font-semibold mb-12 text-center text-gray-800"
         initial={{ opacity: 0, y: -20 }}

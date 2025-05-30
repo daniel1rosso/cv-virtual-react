@@ -51,6 +51,52 @@ const ServicesPage = () => {
       },
       {
         title: {
+          es: "💰 Optimización de Costos en la Nube",
+          en: "💰 Cloud Cost Optimization"
+        },
+        description: {
+          es: "Análisis detallado del uso de recursos en la nube para identificar oportunidades de ahorro, implementando estrategias que reduzcan costos sin comprometer el rendimiento.",
+          en: "Detailed analysis of cloud resource usage to identify savings opportunities, implementing strategies that reduce costs without compromising performance."
+        },
+        items: {
+          es: [
+            "Auditoría de gastos en la nube.",
+            "Recomendaciones de dimensionamiento y uso eficiente.",
+            "Implementación de políticas de ahorro y presupuestos."
+          ],
+          en: [
+            "Cloud cost audits.",
+            "Sizing recommendations and efficient usage.",
+            "Savings policies and budgeting implementation."
+          ]
+        }
+      },
+      {
+        title: {
+          es: "🐳 Contenedorización y Orquestación con Docker y Kubernetes",
+          en: "🐳 Containerization and Orchestration with Docker and Kubernetes"
+        },
+        description: {
+          es: "Implementación de soluciones basadas en contenedores utilizando Docker para asegurar entornos consistentes y portables, junto con Kubernetes para la orquestación automatizada, escalabilidad y alta disponibilidad de aplicaciones en producción.",
+          en: "Implementation of container-based solutions using Docker to ensure consistent and portable environments, along with Kubernetes for automated orchestration, scalability, and high availability of applications in production."
+        },
+        items: {
+          es: [
+            "Empaquetado de aplicaciones y microservicios en contenedores Docker.",
+            "Despliegue y gestión de clústeres Kubernetes para orquestación y escalado automático.",
+            "Integración de pipelines CI/CD con herramientas como GitLab CI y Argo CD.",
+            "Implementación de monitoreo, logging y auto-recuperación de servicios."
+          ],
+          en: [
+            "Packaging applications and microservices into Docker containers.",
+            "Deployment and management of Kubernetes clusters for orchestration and auto-scaling.",
+            "Integration of CI/CD pipelines with tools like GitLab CI and Argo CD.",
+            "Implementation of monitoring, logging, and self-healing services."
+          ]
+        }
+      },
+      {
+        title: {
           es: "🔐 Seguridad en la Nube (DevSecOps)",
           en: "🔐 Cloud Security (DevSecOps)"
         },
@@ -68,28 +114,6 @@ const ServicesPage = () => {
             "Security and compliance policy implementation.",
             "Identity and access management (IAM).",
             "Vulnerability analysis and mitigation."
-          ]
-        }
-      },
-      {
-        title: {
-          es: "🗄️ Backend y Bases de Datos",
-          en: "🗄️ Backend and Databases"
-        },
-        description: {
-          es: "Desarrollo y mantenimiento de sistemas backend robustos y escalables, junto con la gestión eficiente de bases de datos para soportar aplicaciones de alto rendimiento.",
-          en: "Development and maintenance of robust, scalable backend systems along with efficient database management to support high-performance applications."
-        },
-        items: {
-          es: [
-            "Diseño y desarrollo de APIs RESTful y GraphQL.",
-            "Modelado y optimización de bases de datos.",
-            "Integración de servicios externos y microservicios."
-          ],
-          en: [
-            "Design and development of RESTful and GraphQL APIs.",
-            "Database modeling and optimization.",
-            "Integration of external services and microservices."
           ]
         }
       },
@@ -117,28 +141,6 @@ const ServicesPage = () => {
       },
       {
         title: {
-          es: "💰 Optimización de Costos en la Nube",
-          en: "💰 Cloud Cost Optimization"
-        },
-        description: {
-          es: "Análisis detallado del uso de recursos en la nube para identificar oportunidades de ahorro, implementando estrategias que reduzcan costos sin comprometer el rendimiento.",
-          en: "Detailed analysis of cloud resource usage to identify savings opportunities, implementing strategies that reduce costs without compromising performance."
-        },
-        items: {
-          es: [
-            "Auditoría de gastos en la nube.",
-            "Recomendaciones de dimensionamiento y uso eficiente.",
-            "Implementación de políticas de ahorro y presupuestos."
-          ],
-          en: [
-            "Cloud cost audits.",
-            "Sizing recommendations and efficient usage.",
-            "Savings policies and budgeting implementation."
-          ]
-        }
-      },
-      {
-        title: {
           es: "🔌 Integraciones y Soluciones SaaS",
           en: "🔌 SaaS Integrations and Solutions"
         },
@@ -158,7 +160,29 @@ const ServicesPage = () => {
             "Custom connector development."
           ]
         }
-      }
+      },
+      {
+        title: {
+          es: "🗄️ Backend y Bases de Datos",
+          en: "🗄️ Backend and Databases"
+        },
+        description: {
+          es: "Desarrollo y mantenimiento de sistemas backend robustos y escalables, junto con la gestión eficiente de bases de datos para soportar aplicaciones de alto rendimiento.",
+          en: "Development and maintenance of robust, scalable backend systems along with efficient database management to support high-performance applications."
+        },
+        items: {
+          es: [
+            "Diseño y desarrollo de APIs RESTful.",
+            "Modelado y optimización de bases de datos.",
+            "Integración de servicios externos y microservicios."
+          ],
+          en: [
+            "Design and development of RESTful.",
+            "Database modeling and optimization.",
+            "Integration of external services and microservices."
+          ]
+        }
+      },
     ];
 
   return (
