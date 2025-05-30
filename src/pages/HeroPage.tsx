@@ -4,21 +4,28 @@ import { motion } from 'framer-motion';
 import { Linkedin, Github, Send, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import ReactCountryFlag from 'react-country-flag';
 import { useTranslation } from '../context/LanguageContext';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const HeroPage = () => {
-  const { t } = useTranslation();
-  const { lang, setLang } = useTranslation();
+  const { lang, setLang, t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
 
-  const handleLanguageChange = (newLang: "en" | "es") => {
+  const changeLanguage = (newLang: 'en' | 'es') => {
     setLang(newLang);
+
+    const pathWithoutLang = location.pathname.replace(/^\/(en)(\/|$)/, '/');
+    const newPath = newLang === 'en' ? `/en${pathWithoutLang}` : pathWithoutLang;
+
+    navigate(newPath);
     setLangDropdownOpen(false);
   };
 
-  // Opciones de idiomas disponibles
   const languageItems = [
-    { code: "en", label: "English", countryCode: "US" },
-    { code: "es", label: "Español", countryCode: "AR" },
+    { code: 'es', label: 'Español', countryCode: 'ES' },
+    { code: 'en', label: 'English', countryCode: 'US' }
   ];
 
   return (
@@ -34,10 +41,10 @@ const HeroPage = () => {
             className="flex items-center space-x-2 hover:text-gray-700 focus:outline-none"
           >
             <ReactCountryFlag
-              countryCode={lang === "en" ? "US" : "AR"}
+              countryCode={lang === 'en' ? 'US' : 'ES'}
               svg
-              style={{ width: "1.5em", height: "1.5em" }}
-              title={lang === "en" ? "English" : "Español"}
+              style={{ width: '1.5em', height: '1.5em' }}
+              title={lang === 'en' ? 'English' : 'Español'}
             />
           </button>
           {langDropdownOpen && (
@@ -45,13 +52,13 @@ const HeroPage = () => {
               {languageItems.map((item) => (
                 <li key={item.code} className="text-center">
                   <button
-                    onClick={() => handleLanguageChange(item.code as "en" | "es")}
+                    onClick={() => changeLanguage(item.code as 'en' | 'es')}
                     className="w-full flex items-center justify-center space-x-2 px-4 py-2 hover:bg-gray-100"
                   >
                     <ReactCountryFlag
                       countryCode={item.countryCode}
                       svg
-                      style={{ width: "1.5em", height: "1.5em" }}
+                      style={{ width: '1.5em', height: '1.5em' }}
                       title={item.label}
                     />
                     <span>{item.label}</span>
@@ -78,7 +85,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeInOut' }}
         >
-          {t("title_description")}
+          {t('title_description')}
         </motion.p>
         <motion.a
           href="./cv-danielalbertorosso.pdf"
@@ -89,7 +96,7 @@ const HeroPage = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4, ease: 'easeInOut' }}
         >
-          {t("title_download_cv")}
+          {t('title_download_cv')}
         </motion.a>
 
         <motion.div

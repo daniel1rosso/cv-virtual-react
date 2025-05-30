@@ -1,7 +1,8 @@
 // src/context/LanguageContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
 
-  interface Translations {
+interface Translations {
   en: {
     whatsapp_message: string;
     title_description: string;
@@ -205,7 +206,6 @@ interface LanguageContextProps {
   t: (key: keyof Translations['en']) => string;
 }
 
-// Se inicializa en undefined para forzar el uso del Provider.
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 interface LanguageProviderProps {
@@ -213,7 +213,9 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [lang, setLang] = useState<keyof Translations>("en");
+  const location = useLocation();
+  const initialLang: keyof Translations = location.pathname.startsWith('/en') ? 'en' : 'es';
+  const [lang, setLang] = useState<keyof Translations>(initialLang);
 
   const t = (key: keyof Translations['en']): string => {
     return translations[lang][key] || key;
