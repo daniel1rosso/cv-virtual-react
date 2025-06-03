@@ -15,7 +15,7 @@ const CertificationsPage = () => {
             >
             {t("certifications_title")}
         </motion.h2>
-        <div className="grid grid-cols-3 gap-4 md:grid-cols-3 place-items-center">
+        <div className="grid grid-cols-4 gap-4 md:grid-cols-4 place-items-center">
           {[
             {
               src: "https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
@@ -28,6 +28,10 @@ const CertificationsPage = () => {
             {
               src: "https://images.credly.com/size/680x680/images/e07c6cc4-b737-4d7e-8ce8-66b6b7a60367/image.png",
               alt: "AWS Knowledge: Serverless",
+            },
+            {
+              src: "https://learn.microsoft.com/es-es/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
+              alt: "Azure fundamentals AZ-900",
             },
           ].map((image, index) => (
             <motion.img
