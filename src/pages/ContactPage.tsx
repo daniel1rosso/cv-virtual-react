@@ -12,11 +12,17 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const token = (window as any).grecaptcha?.getResponse() as string;
+    if (!token) {
+      setResponseMessage('Por favor verifica que no eres un robot.');
+      return;
+    }
     const formData = new FormData();
     formData.append('first_name', firstName);
     formData.append('last_name', lastName);
     formData.append('email', email);
     formData.append('message', message);
+    formData.append('token', token);
 
     try {
       const response = await fetch('send_email.php', {
@@ -29,6 +35,7 @@ const ContactPage = () => {
       } else {
         setResponseMessage('Error al enviar el mensaje: ' + data.message);
       }
+      (window as any).grecaptcha?.reset();
     } catch (error) {
       setResponseMessage('Error al enviar el mensaje.');
     }
@@ -86,13 +93,19 @@ const ContactPage = () => {
             <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
               {t("contact_form_description")}
             </label>
-            <textarea
-              id="message"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              rows={5}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            ></textarea>
+          <textarea
+            id="message"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            rows={5}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
+          </div>
+          <div className="mb-6">
+            <div
+              className="g-recaptcha"
+              data-sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+            ></div>
           </div>
           <div className="flex items-center justify-between">
             <button
