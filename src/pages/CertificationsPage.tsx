@@ -30,6 +30,10 @@ const CertificationsPage = () => {
               alt: "AWS Knowledge: Serverless",
             },
             {
+              src: "https://templates.images.credential.net/17509327254032850344078733709530.png",
+              alt: "Generative AI Foundations AWS",
+            },
+            {
               src: "https://learn.microsoft.com/es-es/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg",
               alt: "Azure fundamentals AZ-900",
             },
